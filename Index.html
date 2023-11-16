@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surrdidas</title>
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<body>
+   <header>
+    <div class="navbar">
+        <div class="logo"><a href="#">Surdidas <span></span><img src="WhatsApp Image 2023-11-14 at 18.12.23_e0f4517e.jpg" class="logoImg"></a></div>
+        <ul class="links">
+            <li><a href="">Home</a></li>
+            <li><a href="Item.html">Item</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown_menu">
+        <li><a href="">Home</a></li>
+        <li><a href="Item.html">Item</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="#" class="action_btn">Get Started</a></li>
+    </div>
+   </header>
+
+   <main>
+    <section id="home">
+        <h1> WELCOME </h1>
+        <p>“So many people who love you ,<br> Don't focus on the people who don't.”<br> Focus on buying goods at Surdidas</p>
+    </section>
+   </main>
+
+   <script>
+    const toggleBtn = document.querySelector(".toggle_btn")
+    const toggleBtnIcon = document.querySelector(".toggle_btn i")
+    const dropDownMenu = document.querySelector(".dropdown_menu")
+
+    toggleBtn.onclick = function (){
+        dropDownMenu.classList.toggle("open")
+        const isOpen = dropDownMenu.classList.contains("open")
+        
+        toggleBtnIcon.classList = isOpen
+        ? "fa-solid fa-xmark"
+        : "fa-solid fa-bars"
+    }
+ 
+   </script>
+
+
+</body>
+</html>
